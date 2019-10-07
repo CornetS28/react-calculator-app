@@ -22,9 +22,11 @@ module.exports = {
       'react',
     ],
     rules: {
+      "no-nested-ternary": 0,
       'react/jsx-filename-extension': 0,
       'no-shadow': 0,
       'import/no-extraneous-dependencies': 0,
       'camelcase': 0,
+      "react/destructuring-assignment": 0
     },
   };
