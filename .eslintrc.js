@@ -32,6 +32,6 @@ module.exports = {
       "import/no-unresolved": 0,
       "import/extensions": "off",
       "no-trailing-spaces": [2, { "skipBlankLines": true }],
-      "no-confusing-arrow": ["error", {"allowParens": true}]
+      "no-confusing-arrow": "off"
     },
   };
