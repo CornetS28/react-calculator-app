@@ -4,7 +4,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <h1>React Calculator App</h1>
+      <h1>React vvv Calculator App</h1>
     );
   }
 }
