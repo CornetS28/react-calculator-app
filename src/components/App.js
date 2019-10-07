@@ -1,6 +1,6 @@
-import React from 'react';
-import Display from './Display';
-import ButtonPanel from './ButtonPanel';
+import React from 'react'; // eslint-disable-line no-unused-vars
+import Display from './Display'; // eslint-disable-line no-unused-vars
+import ButtonPanel from './ButtonPanel'; // eslint-disable-line no-unused-vars
 import './App.css';
 
 class App extends React.Component {
