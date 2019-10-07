@@ -23,7 +23,7 @@ module.exports = {
       'react',
     ],
     rules: {
-      "import/no-unresolved": "off",
+      "import/no-unresolved": 0,
       "no-nested-ternary": 0,
       'react/jsx-filename-extension': 0,
       'no-shadow': 0,
