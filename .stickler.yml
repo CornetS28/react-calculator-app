@@ -5,4 +5,5 @@ linters:
 files:
     ignore:
         - '.eslintrc.js'
+        - 'src/components/App.js'
         - 'public/*'
