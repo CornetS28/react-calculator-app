@@ -27,6 +27,7 @@ module.exports = {
       'no-shadow': 0,
       'import/no-extraneous-dependencies': 0,
       'camelcase': 0,
-      "react/destructuring-assignment": 0
+      "react/destructuring-assignment": 0,
+      "import/no-unresolved": [ 2, { caseSensitive: false }]
     },
   };
