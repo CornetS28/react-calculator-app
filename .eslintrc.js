@@ -30,6 +30,7 @@ module.exports = {
       'camelcase': 0,
       "react/destructuring-assignment": 0,
       "import/no-unresolved": 0,
-      "import/extensions": "off"
+      "import/extensions": "off",
+      "no-trailing-spaces": [2, { "skipBlankLines": true }]
     },
   };
