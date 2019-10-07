@@ -31,6 +31,7 @@ module.exports = {
       "react/destructuring-assignment": 0,
       "import/no-unresolved": 0,
       "import/extensions": "off",
-      "no-trailing-spaces": [2, { "skipBlankLines": true }]
+      "no-trailing-spaces": [2, { "skipBlankLines": true }],
+      "no-confusing-arrow": ["error", {"allowParens": true}]
     },
   };
