@@ -30,6 +30,6 @@ module.exports = {
       'import/no-extraneous-dependencies': 0,
       'camelcase': 0,
       "react/destructuring-assignment": 0,
-      "import/no-unresolved": [ 2, { caseSensitive: false }]
+      "import/no-unresolved": 0
     },
   };
