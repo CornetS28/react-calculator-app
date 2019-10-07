@@ -2,14 +2,16 @@
   "name": "react-calculator-app",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "11.14.0",
-    "npm": "6.10.3"
-  },
+
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
+  },
+
+  "engines": {
+    "node": "11.14.0",
+    "npm": "6.10.3"
   },
   "scripts": {
     "heroku-postbuild": "npm run build",
