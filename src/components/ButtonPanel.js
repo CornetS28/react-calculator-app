@@ -14,8 +14,8 @@ const ButtonPanel = (props) => {
        ? <Button key={button} name={button} width={false} clickHandler={props.clickHandler} />
        : <Button key={button} name={button} width={false} clickHandler={props.clickHandler} />)
        : <Button key={button} name={button} color='lightGray' width={false} clickHandler={props.clickHandler} />))
-
   );
+  
   return (
     <div className="buttonPanel">
       <div>

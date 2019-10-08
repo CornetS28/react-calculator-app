@@ -22,9 +22,9 @@ const operate = (numberOne, numberTwo, operator) => {
     case '/':
       if (numberTwo === '0' || numberTwo === null) {
         return "Can't / by 0, Press AC to try again!";
-      } else {
-        return x.div(y).toString();
-      }
+      };
+      return x.div(y).toString();
+      
      
 
     case '%':
