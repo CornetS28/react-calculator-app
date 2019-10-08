@@ -1,16 +1,23 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import Button from './Button'; // eslint-disable-line no-unused-vars
 
-const ButtonPanel = () => {
+const ButtonPanel = (props) => {
   const group1 = ['AC', '+/-', '%', '/'];
   const group2 = ['7', '8', '9', 'x'];
   const group3 = ['4', '5', '6', '-'];
   const group4 = ['1', '2', '3', '+'];
   const group5 = ['0', '.', '='];
 
-  const buttonGroups = group => (group.map(button => button === '0' ? <Button key={button} name={button} width />
-    : (button === group[group.length - 1] ? <Button key={button} name={button} color="f1ff92" width={false} /> : <Button key={button} name={button} width={false} />)));
-  
+  // const buttonGroups = group => (group.map(button => button === '0' ? <Button key={button} name={button} width />
+  //   : (button === group[group.length - 1] ? <Button key={button} name={button} color="f1ff92" width={false} /> : <Button key={button} name={button} width={false} />)));
+  const buttonGroups = group => group.map((button) =>
+  (button === '0' ? <Button key={button} name={button} color='lightGray' width={true} clickHandler={props.clickHandler} />
+    : (button === group[group.length - 1] ? (props.operation === button
+      ? <Button key={button} name={button} width={false} clickHandler={props.clickHandler} />
+      : <Button key={button} name={button} width={false} clickHandler={props.clickHandler} />)
+      : <Button key={button} name={button} color='lightGray' width={false} clickHandler={props.clickHandler} />))
+
+)
   return (
     <div className="buttonPanel">
       <div>
