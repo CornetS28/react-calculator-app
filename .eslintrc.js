@@ -34,6 +34,7 @@ module.exports = {
       "no-trailing-spaces": [2, { "skipBlankLines": true }],
       "no-confusing-arrow": "off",
       "react/no-access-state-in-setstate": 0,
-      "react/prop-types": 0
+      "react/prop-types": 0,
+      "no-trailing-spaces": 0
     },
   };
