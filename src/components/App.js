@@ -14,7 +14,7 @@ class App extends React.Component {
     };
   }
 
-  clickHandler = button => {
+  clickHandler = (button) => {
     this.setState(calculate(this.state, button));
   };
 
