@@ -33,6 +33,6 @@ module.exports = {
       "import/extensions": "off",
       "no-trailing-spaces": [2, { "skipBlankLines": true }],
       "no-confusing-arrow": "off",
-      "react/no-access-state-in-setstate": 2
+      "react/no-access-state-in-setstate": 0
     },
   };
