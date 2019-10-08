@@ -1,64 +1,91 @@
 import operate from './operate';
 
-const calculate = (dataObj, buttonName) => {
-  const regex = new RegExp('^[0-9]|[.]+$');
-
-  if (buttonName === 'AC') {
-    return {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  } if (buttonName === '+/-') {
-    if (dataObj.total !== null) {
+const calculate = ({ total, next, operation }, buttonName) => {
+  switch (buttonName) {
+    case 'AC':
       return {
-        total: (Number(dataObj.total) * -1).toString(),
+        total: (0).toString(),
+        operation: null,
+        next: null,
       };
-    } if (dataObj.next !== null) {
-      return {
-        next: (Number(dataObj.next) * -1).toString(),
-      };
-    }
-  }
-
-  if (buttonName !== '=') {
-    if (regex.test(buttonName)) {
-      if (dataObj.total === null) {
+    case '%':
+      if (next) {
         return {
-          total: buttonName,
-        };
-      } if (dataObj.total !== null && dataObj.operation === null) {
-        return {
-          total: dataObj.total + buttonName,
+          total,
+          operation,
+          next: (next / 100).toString(),
         };
       }
-      if (dataObj.total !== null && dataObj.operation !== null) {
-        if (dataObj.next !== null) {
+      return {
+        total: (total / 100).toString(),
+        operation: null,
+        next: null,
+      };
+
+    case '+/-':
+      if (next) {
+        return {
+          total,
+          operation,
+          next: (-next).toString(),
+        };
+      }
+      return {
+        total: (-total).toString(),
+        operation: null,
+        next: null,
+      };
+
+    case '=':
+      if (operation) {
+        return {
+          total: operate(total, next, operation),
+          operation: null,
+          next: null,
+        };
+      }
+      return { total: (total) || (0).toString() };
+    case '+':
+    case '-':
+    case 'X':
+    case '÷':
+      if (operation && next) {
+        return {
+          total: operate(total, next, operation),
+          operation: buttonName,
+          next: null,
+        };
+      }
+      return {
+        total,
+        operation: buttonName,
+        next: null,
+      };
+
+    default:
+      if (buttonName === '.') {
+        if ((next && next.indexOf('.') >= 0)
+          || (total && total.indexOf('.') >= 0)
+        ) {
           return {
-            next: dataObj.next + buttonName,
+            total,
+            operation,
+            next,
           };
         }
-        return {
-          next: buttonName,
-        };
       }
-    } else {
-      if (dataObj.operation === null) {
+      if (operation) {
         return {
-          operation: buttonName,
+          total,
+          operation,
+          next: [next, buttonName].join(''),
         };
       }
       return {
-        total: operate(dataObj.total, dataObj.next, dataObj.operation),
+        total: [total, buttonName].join(''),
+        operation: null,
         next: null,
-        operation: buttonName,
       };
-    }
-  } else {
-    return {
-      total: operate(dataObj.total, dataObj.next, dataObj.operation) !== 'error' ? operate(dataObj.total, dataObj.next, dataObj.operation) : null,
-      next: null,
-    };
   }
 };
 
