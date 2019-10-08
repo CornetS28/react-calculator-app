@@ -1,7 +1,7 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import Display from './Display'; // eslint-disable-line no-unused-vars
 import ButtonPanel from './ButtonPanel'; // eslint-disable-line no-unused-vars
-import calculate from '../logic/calculate' // eslint-disable-line no-unused-vars
+import calculate from '../logic/calculate'; // eslint-disable-line no-unused-vars
 import './App.css';
 
 class App extends React.Component {
@@ -10,8 +10,8 @@ class App extends React.Component {
     this.state = {
       total: null,
       next: null,
-      operation: null
-    }
+      operation: null,
+    };
   }
 
   clickHandler = (button) => {
@@ -20,7 +20,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-         <Display result={this.state.next || this.state.total || '0'} />
+        <Display result={this.state.next || this.state.total || '0'} />
         <ButtonPanel clickHandler={this.clickHandler} operation={this.state.operation === 'null' ? '' : this.state.operation} />
       </div>
     );
