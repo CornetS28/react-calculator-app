@@ -1,7 +1,7 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import Button from './Button'; // eslint-disable-line no-unused-vars
 
-const ButtonPanel = (props) => {
+const ButtonPanel = props => {
   const group1 = ['AC', '+/-', '%', '/'];
   const group2 = ['7', '8', '9', 'x'];
   const group3 = ['4', '5', '6', '-'];
