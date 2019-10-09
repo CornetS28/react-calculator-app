@@ -1,0 +1,53 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #303030;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+.display {
+  display: flex;
+  justify-content: flex-end;
+  background: gray;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  align-items: center;
+  padding-right: 5px;
+} 
+
+.buttonPanel {
+  display: flex;
+  flex-direction: column;
+}
+  
+.buttonPanel>div {
+  width: 100%;
+}
+  
+.button {
+  width: 25%;
+  color: black;
+  text-align: center;
+  height: 90px;
+  background: orange;
+  border: 1px solid gray;
+  font-size: 25px;
+}
+  
+.button:focus {
+  outline: none;
+}
+  
+.button:hover {
+  background: rgb(187, 185, 185) !important;
+}
