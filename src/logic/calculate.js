@@ -52,8 +52,8 @@ const calculate = ({ total, next, operation }, buttonName) => {
 
     case '+':
     case '-':
-    case 'X':
-    case '÷':
+    case 'x':
+    case '/':
       if (operation && next) {
         return {
           total: operate(total, next, operation),
